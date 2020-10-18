@@ -84,20 +84,20 @@ function createMarkers(response) {
     "Outdoors Map": outdoorsmap
   };
 
-  // Create overlay object to hold our overlay layer
-  var overlayMaps = {
-     "Tectonic Plates": tectonicplates,
-     "Earthquakes": earthquakes
-  };
+  // // Create overlay object to hold our overlay layer
+  // var overlayMaps = {
+  //    "Tectonic Plates": tectonicplates,
+  //    "Earthquakes": earthquakes
+  // };
 
-  // Create our map, giving it the streetmap and earthquakes layers to display on load
-  var myMap = L.map("mapid", {
-    center: [
-      36.1627, -86.7816
-    ],
-    zoom: 5,
-    layers: [satellitemap, tectonicplates]
-  });
+  // // Create our map, giving it the streetmap and earthquakes layers to display on load
+  // var myMap = L.map("mapid", {
+  //   center: [
+  //     36.1627, -86.7816
+  //   ],
+  //   zoom: 5,
+  //   layers: [satellitemap, tectonicplates]
+  // });
 
         // add circles to the map
         var mag = response.features[i].properties.mag;
@@ -143,9 +143,8 @@ function createMarkers(response) {
         return div;
     }
 
-    L.control.layers(baseMaps, overlayMaps, {
-        collapsed: false
-      }).addTo(myMap);
+    // L.control.layers(baseMaps, overlayMaps, {
+    //     collapsed: false
+    //   }).addTo(myMap);
     legend.addTo(myMap);
-
-}
+  }
